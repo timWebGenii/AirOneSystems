@@ -1,0 +1,11 @@
+.quality{
+
+    transform: translate(-50%, 60%);
+    
+    &__text,
+    &__img {
+        flex: 0 1 43%
+    }
+
+
+}

@@ -1,0 +1,48 @@
+.container {
+    padding: 0 10rem;
+}
+.row {
+    display: flex;
+    align-items: center;
+}
+.flex-center {
+    justify-content: center;
+}
+
+.flex-between {
+    justify-content: space-between
+}
+.col-1-of-2,
+.col-2-of-2 {
+    flex: 0 1 45%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.u-margin-bottom-small {
+    margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+    margin-bottom: 5rem !important;
+    @include respond (tab-port) {
+          margin-bottom: 3rem !important;
+    }
+}
+
+.u-margin-bottom-big {
+    margin-bottom: 8rem !important;
+    @include respond (tab-port) {
+          margin-bottom: 5rem !important;
+    }
+}
+
+.u-margin-top-big {
+    margin-top: 8rem !important; 
+}
+
+.u-margin-top-huge {
+    margin-top: 10rem !important;
+}

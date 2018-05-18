@@ -1,0 +1,112 @@
+.navigation {
+    border-bottom: .5rem solid $color-secondary;
+    
+
+    
+
+    &__icon {
+        width: 7rem;
+        height: 7rem;
+        
+    }
+    &__nav{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__container {
+
+        &--left{
+
+        }
+        &--right {
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            
+
+            @include respond (tab-port){
+                display: none;
+            }
+        }
+    }
+    &__logo-box {
+        margin: 1rem
+    }
+    &__logo {
+
+    }
+    &__phone-box {
+
+        &--number {
+            color: $color-primary;
+            text-align: right;
+            font-size: 3rem;
+            font-weight: bold;
+            margin-right: 2rem;
+            text-shadow: 0 .1rem .1rem $color-black;
+            margin-bottom: 1rem;
+            
+
+        }
+    }
+    &__list {
+        list-style: none;
+        text-align: center;
+        width: 100%;
+        font-weight: bold;
+        text-shadow: 0 .1rem .1rem $color-black;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item {
+        margin-right: 1rem; 
+        
+    }
+    &__link {
+        &:link,
+        &:visited{
+            display: inline-block;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2rem;
+            font-weight: bold;
+            color: $color-primary;
+            padding: 1rem;
+            transition: .3s;
+        }
+        &:hover{
+            background-color: $color-primary;
+            color: $color-white;
+        }
+
+    }
+    &__contact-box {
+        background-color: $color-primary;
+        border: .2rem solid $color-white;
+        color: $color-white;
+        padding: 1rem;
+    }
+
+    &__mobile {
+        
+        
+        &--button {
+            border: none;
+            background-color: transparent;
+            margin-right: .5rem;
+            display: none;
+
+        @include respond (tab-port){
+            display: inline-block;
+        }
+    }
+    }
+
+
+}

@@ -1,0 +1,61 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $color-dark-grey-3;
+    
+}
+
+.heading-primary {
+    backface-visibility: hidden;
+        
+    &--main {
+        color: $color-white;
+        font-size: 5rem;
+        text-shadow: 0 .5rem .5rem $color-black;
+
+        @include respond (tab-land) {
+            font-size: 4rem;
+        }
+    }
+
+    &--sub {
+        font-size: 4rem;
+        color: $color-secondary;
+        text-shadow: 0 .5rem .5rem $color-black;
+        @include respond (tab-land) {
+            font-size: 3rem;
+        }
+    }
+}
+
+.heading-secondary {
+    font-size: 4rem;
+    color: $color-secondary;
+
+    &--white {
+        font-size: 3.5rem;
+        color: $color-white;
+    }
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    color: $color-primary;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include respond (tab-mid) {
+        text-align: center;
+    }
+}
+.paragraph{
+    font-size: $default-font-size;;
+    &:not(:last-child) {
+          margin-bottom: 3rem;
+    }
+
+    &--light{
+        color: $color-light-grey-1;
+    }
+}

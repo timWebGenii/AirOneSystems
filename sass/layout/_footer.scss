@@ -1,0 +1,43 @@
+.footer {
+    padding: 10rem;
+    background-color: $color-dark-grey-3;
+
+    display:flex;
+    
+
+    & .row {
+        align-items: flex-start;
+    }
+
+    & .col {
+        flex: 0 1 20%;
+    }
+
+    &__heading {
+        color: $color-secondary;
+        font-size: 2rem;
+    }
+
+    & p {
+        width: 75%;
+    }
+
+    &__list {
+        list-style: none;
+        
+    }
+
+    &__link {
+        &:link,
+        &:visited{
+            display: inline-block;
+            text-decoration: none;
+            transition: all .2s;
+        }
+        &:hover{
+            color: $color-secondary;
+        }
+
+    }
+
+}

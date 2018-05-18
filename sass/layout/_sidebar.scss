@@ -1,0 +1,92 @@
+.sidebar {
+    position: relative;
+        width: 50vw;
+        background-color: $color-dark-grey-3;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: center;
+
+        &__close {
+            border: none;
+            fill: $color-light-grey-3;
+            background-color: transparent;
+            margin-right: .5rem;
+            position: absolute;
+            top: .5rem;
+            right: .5rem;
+            
+        }
+
+        &__icon {
+            height: 3rem;
+            width: 3rem;
+        }
+
+        &__nav {
+            width: 100%;
+        }
+
+        &__list{
+            
+        }
+        &__item {
+            display: block;
+            background-color: $color-light-grey-2;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1rem solid $color-secondary;
+            &:not(:last-child) {
+                margin-bottom: 3rem;
+          }
+        }
+        &__accordion {
+            
+            &--heading {
+                font-size: 2rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: $color-primary; 
+                border: none;
+                
+                display: flex;
+                align-items: center;
+
+                
+                
+            }
+            &--dropdown {
+                
+                
+            }
+            &--icon {
+                fill: $color-primary;
+                height: 3rem;
+                width: 3rem;
+                
+            }
+
+            &--link{
+                &:link,
+                &:visited {
+                    font-size: 1.7rem;
+                
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-primary;
+                }
+            }
+        }
+        &__link {
+            
+            &:link,
+            &:visited {
+                font-size: 2rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $color-primary;
+                
+            }
+        }
+}

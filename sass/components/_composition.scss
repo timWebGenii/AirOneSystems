@@ -1,0 +1,9 @@
+.composition {
+    display: flex;
+    justify-content: center;
+
+    &__photo {
+        width: 100%;
+        text-align: center;
+    }
+}

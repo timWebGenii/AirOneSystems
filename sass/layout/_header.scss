@@ -1,0 +1,45 @@
+.header {
+    position: relative;
+
+    &__background {
+        height: 80vh;
+        clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
+        overflow: hidden;
+    }
+
+    &__box {
+        position: absolute;
+       top: 60%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+        width: 100vw;
+    }
+    &__content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+
+        @include respond (tab-port) {
+            padding-top: 5rem;
+            text-align: center;
+            flex-flow: column;
+            align-items: center;
+        }
+    }
+
+    &__text-box {
+        @include respond (tab-land) {
+            padding-top: 5rem;
+        }
+    }
+
+    &__product-box {
+        position: relative;
+        top: 10rem;
+        
+    }
+
+    &__product-img{
+        
+    }
+}
