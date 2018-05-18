@@ -1,9 +1,6 @@
 .navigation {
     border-bottom: .5rem solid $color-secondary;
     
-
-    
-
     &__icon {
         width: 7rem;
         height: 7rem;
@@ -83,6 +80,7 @@
         &:hover{
             background-color: $color-primary;
             color: $color-white;
+            border-radius: 3px;
         }
 
     }

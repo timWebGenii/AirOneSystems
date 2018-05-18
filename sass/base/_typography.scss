@@ -23,6 +23,7 @@ body {
         font-size: 4rem;
         color: $color-secondary;
         text-shadow: 0 .5rem .5rem $color-black;
+        margin-bottom: .8rem;
         @include respond (tab-land) {
             font-size: 3rem;
         }

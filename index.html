@@ -26,66 +26,59 @@
     <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
 </head>
 <body>
-<amp-sidebar id="sidebar-right" layout="nodisplay" side="right" class="sidebar">
-    
-            <button class="sidebar__close" on="tap:sidebar-right.close"
-                    class="ampstart-btn" role="button">
-                    <svg class="sidebar__icon">
-                            <use xlink:href="img/sprite.svg#icon-cross"></use>
-                        </svg>
-                </button>
-        <nav toolbar="(min-width: 1000px)" class="sidebar__nav" toolbar-target="target-element-right">
-                
-            <ul class="sidebar__list">
-                <li class="sidebar__item">
-                    <a href="#" class="sidebar__link">Home</a>
-                </li>
-                <li class="sidebar__item">
-                    <amp-accordion>
-                    <section class="sidebar__accordion">
-                        <div class="sidebar__accordion--heading">
-                                <span>Services</span>
-                                   
-                                            <svg class="sidebar__accordion--icon">
-                                            <use xlink:href="img/sprite.svg#icon-chevron-down"></use>
-                                        
-                        </div>
-                        
-                        <ul class="sidebar__accordion--list">
-                            <li class="sidebar__accordion--item">
-                                    <a href="#" class="sidebar__accordion--link">Repairs &amp; Emergencey</a>
+    <amp-sidebar id="sidebar-right" layout="nodisplay" side="right" class="sidebar">
 
-                            </li>
-                            <li class="sidebar__accordion--item">
-                                    <a href="#" class="sidebar__accordion--link">Indoor Air Quality</a>
+        <button class="sidebar__close" on="tap:sidebar-right.close" class="ampstart-btn" role="button">
+            <svg class="sidebar__icon">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+            </svg>
+        </button>
+            <nav toolbar="(min-width: 1000px)" class="sidebar__nav" toolbar-target="target-element-right">
 
-                            </li>
-                            <li class="sidebar__accordion--item">
-                                    <a href="#" class="sidebar__accordion--link">Ductless Split Systems</a>
+                <ul class="sidebar__nav">
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">Home</a>
+                    </li>
 
-                            </li>
-                            <li class="sidebar__accordion--item">
-                                    <a href="#" class="sidebar__accordion--link">Maintenance &amp; Service Agreements</a>
 
-                            </li>
-                        </ul>
-                        
-                    </section>
-                    </amp-accordion>
-                </li>
-                <li class="sidebar__item">
-                    <a href="#" class="sidebar__link">Multi-Family</a>
-                </li>
-                <li class="sidebar__item">
-                    <a href="#" class="sidebar__link">Contact Us</a>
-                </li>
-            </ul>
-        </nav>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">Services </a>
+
+                    </li>
+
+
+                    <ul class="sidebar__services">
+                        <li class="sidebar__services--item">
+                            <a href="#" class="sidebar__services--link">Repairs &amp; Emergencey</a>
+
+                        </li>
+                        <li class="sidebar__services--item">
+                            <a href="#" class="sidebar__services--link">Indoor Air Quality</a>
+
+                        </li>
+                        <li class="sidebar__services--item">
+                            <a href="#" class="sidebar__services--link">Ductless Split Systems</a>
+
+                        </li>
+                        <li class="sidebar__services--item">
+                            <a href="#" class="sidebar__services--link">Maintenance &amp; Service Agreements</a>
+
+                        </li>
+                    </ul>
+
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">Multi-Family</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <a href="#" class="sidebar__link">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
         <div class="sidebar__logo-box">
             <amp-img src="img/air-one-logo-white.jpg" alt="Air One Systems Logo" class="sidebar__logo" width="205" height="80"></amp-img>
         </div>
     </amp-sidebar>
-    
+
     <div class="navigation">
         <nav class="navigation__nav">
             <div class="navigation__container--left">
@@ -96,16 +89,15 @@
                 </div>
             </div>
             <div class="navigation__mobile">
-                    <button class="navigation__mobile--button" on="tap:sidebar-right.toggle"
-                    class="ampstart-btn" role="button">
+                <button class="navigation__mobile--button" on="tap:sidebar-right.toggle" class="ampstart-btn" role="button">
                     <svg class="navigation__icon">
-                            <use xlink:href="img/sprite.svg#icon-menu"></use>
-                        </svg>
+                        <use xlink:href="img/sprite.svg#icon-menu"></use>
+                    </svg>
                 </button>
-                    
+
             </div>
             <div class="navigation__container--right">
-               
+
                 <div class="navigation__phone-box">
                     <p class="navigation__phone-box--number">(678)963-0111</p>
                 </div>
@@ -147,7 +139,7 @@
                 </div>
 
                 <div class="header__product-box">
-                    <amp-img src="img/airCondTrans.png" alt="Goodman Air Conditioner" class="header__product-img" width="350" height="440" ></amp-img>
+                    <amp-img srcset="img/airCondTrans.png 1100w img/airCondTrans-small.png 1000w" alt="Goodman Air Conditioner" class="header__product-img" width="300" height="400" layout="intrinsic"></amp-img>
                 </div>
             </div>
         </div>
@@ -159,23 +151,27 @@
 
 
             <div class="quality__text">
-
-                <h2 class="heading-tertiary">Quality HVAC Units by a quality company</h2>
+                <div class="quality__text--box-1">
+                        <h2 class="heading-tertiary">Quality HVAC Units by a quality company</h2>
+                        <p class="paragraph">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et leo condimentum, mollis velit interdum, congue quam. Etiam
+                            molestie egestas quam. Vivamus maximus viverra pellentesque. Donec auctor enim sed dictum semper. Integer
+                            id sem ut tortor scelerisque luctus. Etiam tortor eros, interdum in luctus quis, viverra vitae tellus
+                        </p>
+                </div>
+                <div class="quality__text--box-2">
+                        <h2 class="heading-tertiary">Years of experience focused on your home</h2>
                 <p class="paragraph">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et leo condimentum, mollis velit interdum, congue quam. Etiam
                     molestie egestas quam. Vivamus maximus viverra pellentesque. Donec auctor enim sed dictum semper. Integer
                     id sem ut tortor scelerisque luctus. Etiam tortor eros, interdum in luctus quis, viverra vitae tellus
                 </p>
-                <h2 class="heading-tertiary">Years of experience focused on your home</h2>
-                <p class="paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et leo condimentum, mollis velit interdum, congue quam. Etiam
-                    molestie egestas quam. Vivamus maximus viverra pellentesque. Donec auctor enim sed dictum semper. Integer
-                    id sem ut tortor scelerisque luctus. Etiam tortor eros, interdum in luctus quis, viverra vitae tellus
-                </p>
+                </div>
+                
             </div>
             <div class="quality__img">
                 <div class="composition">
-                    <amp-img src="img/goodmanLogo.png" alt="Goodman Logo" class="composition__photo" width="500" height="225"></amp-img>
+                    <amp-img src="img/goodmanLogo.png" alt="Goodman Logo" class="composition__photo" width="500" height="225" layout="intrinsic"></amp-img>
                 </div>
 
             </div>
@@ -184,37 +180,35 @@
         </section>
         <section class="section-call-us">
             <div class="call-us__content">
-                    <amp-position-observer on="scroll:parallaxTransition.seekTo(percent=event.percent)" intersection-ratios="0" layout="nodisplay">
-                        </amp-position-observer>
-                        <amp-img id="parallaxImage" width="1920" height="800" layout="responsive" src="img/goodman-techs.jpg" alt="Goodman Techs"></amp-img>
-            
-            <amp-animation id="parallaxTransition" layout="nodisplay">
+                <amp-position-observer on="scroll:parallaxTransition.seekTo(percent=event.percent)" intersection-ratios="0" layout="nodisplay">
+                </amp-position-observer>
+                <amp-img id="parallaxImage" width="1500" height="1000" layout="responsive" src="img/customer.jpg" alt="Goodman Techs"></amp-img>
+
+                <amp-animation id="parallaxTransition" layout="nodisplay">
                     <script type="application/json">
-                      {
-                        "duration": "1",
-                        "fill": "both",
-                        "direction": "reverse",
-                        "animations": [
-                          {
-                            "selector": "#parallaxImage",
-                            "keyframes": [
-                              { "transform": "translateY(-30%)" }
-                            ]
-                          }
-                        ]
-                      }
+                        {
+                            "duration": "1",
+                            "fill": "both",
+                            "direction": "reverse",
+                            "animations": [{
+                                "selector": "#parallaxImage",
+                                "keyframes": [{
+                                    "transform": "translateY(-30%)"
+                                }]
+                            }]
+                        }
                     </script>
-                  </amp-animation>
-  </div>
-  <div class="section-call-us__text-box">
-        <div class="heading-primary text-center">
-                <h1 class="heading-primary--main">Call Us Today</h1>
-                <h1 class="heading-primary--main">(678) 963-0111</h1>
+                </amp-animation>
             </div>
-  </div>
+            <div class="section-call-us__text-box">
+                <div class="heading-primary text-center">
+                    <h1 class="heading-primary--main">Call Us Today</h1>
+                    <h1 class="heading-primary--main">(678) 963-0111</h1>
+                </div>
             </div>
-                    
-            
+            </div>
+
+
         </section>
         <section class="section-services">
             <div class="text-center">
@@ -230,8 +224,8 @@
                                 <use xlink:href="img/sprite.svg#icon-wrench"></use>
                             </svg>
                             <a href="#">
-                            <figcaption class="card__caption">
-                                Maintenance &amp; Service Agreements
+                                <figcaption class="card__caption">
+                                    Maintenance &amp; Service Agreements
                                 </figcaption>
                             </a>
                         </figure>
@@ -244,29 +238,13 @@
 
                     </div>
                     <div class="card">
-                            <p class="card__title">Ductless Split Systems</p>
+                        <p class="card__title">Ductless Split Systems</p>
                         <figure class="card__circle ">
                             <svg class="card__icon">
                                 <use xlink:href="img/sprite.svg#icon-fork"></use>
                             </svg>
                             <a href="#">
-                            <figcaption class="card__caption">Ductless Split Systems</figcaption>
-                        </a>
-                        </figure>
-                        <div class="card__text">
-                            <p class="paragraph">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat,
-                            </p>
-                        </div>
-                    </div>
-                    <div class="card">
-                            <p class="card__title">Indoor Air Quality</p>
-                        <figure class="card__circle ">
-                            <svg class="card__icon">
-                                <use xlink:href="img/sprite.svg#icon-wind"></use>
-                            </svg>
-                            <a href="#">
-                            <figcaption class="card__caption">Indoor Air Quality</figcaption>
+                                <figcaption class="card__caption">Ductless Split Systems</figcaption>
                             </a>
                         </figure>
                         <div class="card__text">
@@ -276,13 +254,29 @@
                         </div>
                     </div>
                     <div class="card">
-                            <p class="card__title text-center">Repairs &amp; Emergency Services</p>
+                        <p class="card__title">Indoor Air Quality</p>
+                        <figure class="card__circle ">
+                            <svg class="card__icon">
+                                <use xlink:href="img/sprite.svg#icon-wind"></use>
+                            </svg>
+                            <a href="#">
+                                <figcaption class="card__caption">Indoor Air Quality</figcaption>
+                            </a>
+                        </figure>
+                        <div class="card__text">
+                            <p class="paragraph">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur arcu erat,
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p class="card__title text-center">Repairs &amp; Emergency Services</p>
                         <figure class="card__circle ">
                             <svg class="card__icon">
                                 <use xlink:href="img/sprite.svg#icon-fire"></use>
                             </svg>
                             <a href="#">
-                            <figcaption class="card__caption">Repairs &amp; Emergency Services</figcaption>
+                                <figcaption class="card__caption">Repairs &amp; Emergency Services</figcaption>
                             </a>
                         </figure>
                         <div class="card__text">

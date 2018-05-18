@@ -1,24 +1,38 @@
 .section-quality {
-   padding: 10rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
+    margin: 15rem 0 10rem 0;
 
     @include respond (tab-mid) {
+        display: flex;
         flex-flow: column;
-        
-        padding-top: 10rem;
-        width: 75%;
-        margin: 0 auto;
     }
+    @include respond (tab-small) {
+        padding-top: 5rem;
+    }
+    @include respond (phone) {
+        padding-top: 2rem;
+        margin: 8rem 0;
+    }
+    
 }
 
 .section-call-us {
     position: relative;
-    height: 45vh;
+    height: 60vh;
     transform: skewY(-7deg);
     overflow: hidden;
+
+    @include respond (tab-ipad) {
+        height: 50vh
+    }
+    @include respond (tab-port) {
+        height: 40vh
+    }
+    @include respond (phone) {
+        height: 35vh
+    }
 
     & > * {
         transform: skewY(7deg);
@@ -28,28 +42,41 @@
    &__text-box {
     @include absCenter;
     transform: translate(-50%, -50%) skewY(7deg);
+    
+    & > .heading-primary--main {
+        @include respond (phone) {
+            font-size: 1rem;
+        }
+    }
+    
    }
+    
+     
 }
 
 .section-services {
     background-color: $color-dark-grey-3;
-    padding: 30rem 10rem 10rem 10rem;
+    padding: 20rem 10rem 10rem 10rem;
     
-    margin-top: -18rem;
+    margin-top: -15rem;
+
+    & > .btn-text:link,
+    & > .bth-text:visited {
+        margin-top: 10rem;
+    }
+
+    @include respond (tab-mid) {
+        
+    }
     
     .services {
         display: flex;
         justify-content: space-evenly;
         align-items: flex-end;
 
-        @include respond (tab-land) {
-            flex-flow: wrap;
-      }
     }
 
-    & .btn-text {
-        margin-top: 5rem;
-    }
+    
 }
 
 

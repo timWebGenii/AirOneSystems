@@ -1,11 +1,16 @@
 .sidebar {
-    position: relative;
+        position: relative;
         width: 50vw;
         background-color: $color-dark-grey-3;
         display: flex;
         flex-flow: column;
         justify-content: space-around;
         align-items: center;
+
+        &__icon {
+            height: 3rem;
+            width: 3rem;
+        }
 
         &__close {
             border: none;
@@ -18,65 +23,60 @@
             
         }
 
-        &__icon {
-            height: 3rem;
-            width: 3rem;
-        }
-
         &__nav {
             width: 100%;
-        }
-
-        &__list{
             
         }
+        
         &__item {
-            display: block;
+            
             background-color: $color-light-grey-2;
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 1rem solid $color-secondary;
-            &:not(:last-child) {
+            height: 8rem;
+            text-align: right;
+            border-bottom: .6rem solid $color-secondary;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            &:nth-child(2){
+                border: none;
+            }
+        
+            &:not(:nth-child(2)) {
                 margin-bottom: 3rem;
           }
+          &:hover > .sidebar__link {
+              &:link,
+              &:visited {
+                color: $color-light-grey-2;
+            }
+          }
+          
         }
-        &__accordion {
+        &__item:hover::before,
+        &__item--active::before {
+            transform: scaleY(1);
+            width: 100%;
+            // color: $color-light-grey-2;
+        }
+        &__item::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 3px;
+            background-color: $color-primary;
             
-            &--heading {
-                font-size: 2rem;
-                font-weight: bold;
-                text-transform: uppercase;
-                color: $color-primary; 
-                border: none;
-                
-                display: flex;
-                align-items: center;
-
-                
-                
-            }
-            &--dropdown {
-                
-                
-            }
-            &--icon {
-                fill: $color-primary;
-                height: 3rem;
-                width: 3rem;
-                
-            }
-
-            &--link{
-                &:link,
-                &:visited {
-                    font-size: 1.7rem;
-                
-                text-transform: uppercase;
-                text-decoration: none;
-                color: $color-primary;
-                }
-            }
+            
+            transform: scaleY(0);
+            transform-origin: center;
+            transition: transform .2s,
+            width .3s cubic-bezier(0,1.18,.89,.99) .2s;
         }
+        
+
         &__link {
             
             &:link,
@@ -86,7 +86,47 @@
                 text-transform: uppercase;
                 text-decoration: none;
                 color: $color-primary;
+                position: relative;
+                z-index: 10;
+                height: 4rem;
+                margin-right: 2rem;
+
+            }
+
+        }
+        &__services {
+            margin-bottom: 3rem;
+            border-bottom: .6rem solid $color-secondary;
+            
+
+            &--item {
+                background-color: $color-light-grey-3;
+                height: 4rem;
+                text-align: right;
                 
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+               
+            }
+
+            &--link {
+            
+                &:link,
+                &:visited {
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    color: $color-primary;
+                    position: relative;
+                    z-index: 10;
+                    margin-right: 2rem;
+    
+                }
+    
             }
         }
-}
+    }

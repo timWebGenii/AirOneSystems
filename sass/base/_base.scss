@@ -26,6 +26,7 @@ html {
 body {
       box-sizing: border-box;
       background-image: linear-gradient(top, $color-light-grey-1, $color-light-grey-2);
+      max-width: 200rem;
       //  @include respond(tab-port) {
       //        padding: 0;
       //  }

@@ -5,6 +5,7 @@
         height: 80vh;
         clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
         overflow: hidden;
+
     }
 
     &__box {
@@ -12,19 +13,30 @@
        top: 60%;
        left: 50%;
        transform: translate(-50%, -50%);
-        width: 100vw;
+        width: 90vw;
+
+        @include respond (tab-port) {
+            top: 50%;
+            width: 100vw;
+        }
+        @include respond (tab-small) {
+            top: 60%;
+        }
+        @include respond (phone) {
+            top: 50%;
+        }
     }
     &__content {
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-evenly;
+        justify-content: center;
 
-        @include respond (tab-port) {
-            padding-top: 5rem;
-            text-align: center;
+        @include respond (tab-small) {
             flex-flow: column;
             align-items: center;
+            text-align: center;
         }
+        
     }
 
     &__text-box {
@@ -36,7 +48,19 @@
     &__product-box {
         position: relative;
         top: 10rem;
-        
+        flex: 0 1 40%;
+        display: flex;
+        justify-content: center;
+
+        @include respond (tab-mid){
+            flex: 0 1 25%;
+        }
+        @include respond (tab-small) {
+            width: 30rem;
+        }
+        @include respond (phone) {
+            width: 25rem;
+        }
     }
 
     &__product-img{
