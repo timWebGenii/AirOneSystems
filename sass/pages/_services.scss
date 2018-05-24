@@ -1,0 +1,42 @@
+.section-detail-services{
+
+
+    .detail-services {
+        
+        &__content{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10rem;
+            @include respond (tab-mid) {
+                padding: 5rem;
+            }
+            @include respond (tab-lg) {
+                flex-flow: column;
+                align-items: center;
+            }
+            &--left{
+                flex: 0 1 47%;
+                @include respond (tab-lg) {
+                    text-align: center;
+                    margin-bottom: 5rem;
+                }
+            }
+
+            &--right{
+                flex: 0 1 47%;
+                
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                
+            }
+        }
+
+        &__image-box{
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

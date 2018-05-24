@@ -1,6 +1,64 @@
 .get-started {
-    & .row {
+        
+    &__content{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
         align-items: flex-start;
+
+        &--icon {
+            fill: $color-secondary;
+            height: 3rem;
+            width: 3rem;
+            margin-right: .5rem;
+
+            @include respond (tab-small) {
+                margin-right: .3rem;
+            }
+        }
+
+        &--text,
+        &--form {
+            flex: 0 1 45%;
+
+            @include respond (tab-small) {
+                width: 75vw;
+                text-align: center;
+                margin-bottom: 5rem;
+            }
+
+        }
+
+        
+
+        @include respond (tab-small) {
+            flex-flow: column;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        &--contact-list {
+            @include respond (tab-small) {
+                display: flex;
+                justify-content: space-evenly;
+            
+            }
+        }
+
+        &--contact-item{
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            &:not(:last-child){
+                @include respond (tab-small) {
+                margin-right: .5rem;
+
+                }
+            }
+            
+            
+        }
     }
     
+
 }

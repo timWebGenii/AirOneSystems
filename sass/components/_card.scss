@@ -1,108 +1,113 @@
-.card{
-       position: relative;
-       
-       @include respond (tab-land) {
-             flex: 0 1 50%;
-             margin-bottom: 10rem;
-       }
-    &__title {
-          font-size: 2rem;
-          color: $color-light-grey-2;
-          width: 13rem;
-          text-transform: uppercase;
+.card {
+      position: relative;
+      @include respond (tab-small) {
+            flex: 0 1 50%;
+            margin-bottom: 15rem;
+      }
+      @include respond (phone) {
+            flex: 0 1 100%
+      }
+      &__title {
+            font-size: 2rem;
+            color: $color-white;
+            width: 13rem;
+            text-transform: uppercase;
             margin: 0 auto;
             transition: all .3s;
             margin-bottom: 1rem;
-
-    }
-    &__circle {
-        width: 20rem;
-        height: 20rem;
-        border-radius: 50%;
-        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-        box-shadow: 0 1rem 1rem $color-black;
-        margin: 0 auto;
-
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        
-    }
+            @include respond (phone) {
+                  width: 80%;
+            }
+      }
+      &__circle {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            box-shadow: 0 1rem 1rem $color-black;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+      }
       &__icon {
-            fill: $color-light-grey-2;
+            fill:$color-secondary;
             width: 8rem;
             transition: all .4s;
             margin: 0 auto;
       }
-
-  &__text {
-      @include absCenter;
-      transform: translate(-50%, -30%);
-     padding: 2rem;
-     opacity: 0;
-     transition: all .4s .1s;
-     width: 100%;
-     color: $color-light-grey-2;
-
-     @include respond (tab-land) {
-           width: 65%;
-     }
-  }
-
-  &__caption {
-        @include absCenter;
-        transform: translate(-50%, -200%);
-        color: $color-light-grey-2;
-        text-transform: uppercase;
-        font-size: 2rem;
-        text-align: center;
-        opacity: 0;
-        transition: all .4s;
-        width:13rem;
-        
-  }
-  &:hover &__title {
-        opacity: 0;
-
-  }
-  &:hover &__title, 
-  &:hover &__icon {
-        transform: translateY(130%);
-        opacity: 0;
-  }
-
-  &:hover &__caption{
-        opacity: 1;
-        transform: translate(-50%, -50%);
-  }
-
-  &:hover &__text {
-        opacity: 1;
-        transform: translate(-50%, 100%);
-        
-        @include respond (tab-land) {
-        transform: translate(-50%, 70%);
-       
-      }
-  }
-
-    
-
-  &:hover &__img {
-        filter: blur(3px) brightness(50%);
-  }
-  
-  @media only screen and (max-width: 56.25em),
-      only screen and (hover: none) {
-            &__text {
-                  width: 100%;
-                  transform: translate(-50%, 100%);
-                  opacity: 1;
+      &__text {
+            @include absCenter;
+            transform: translate(-50%, -30%);
+            padding: 2rem;
+            opacity: 0;
+            transition: all .4s .1s;
+            width: 100%;
+            color: $color-light-grey-2;
+            @include respond (phone) {
+                  width: 90%;
             }
 
+            
 
       }
+      &__caption {
+            @include absCenter;
+            transform: translate(-50%, -200%);
+            color: $color-white;
+            text-transform: uppercase;
+            font-size: 2rem;
+            text-align: center;
+            opacity: 0;
+            transition: all .4s;
+            width: 13rem;
+
+            
+      }
+      &:hover &__title {
+            opacity: 0;
+      }
+      &:hover &__title,
+      &:hover &__icon {
+            transform: translateY(130%);
+            opacity: 0;
+      }
+      &:hover &__caption {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+      }
+      &:hover &__text {
+            opacity: 1;
+            transform: translate(-50%, 100%);
+            @include respond (tab-small) {
+                  transform: translate(-50%, 160%);
+            }
+            @include respond (lg-phone) {
+                  transform: translate(-50%, 130%);
+            }
+      }
+      &:hover &__img {
+            filter: blur(3px) brightness(50%);
+      }
+
+//----------------no hover query------------------------//
+      
+      @media only screen and (hover: none){
+            &__text {
+                  opacity: 1;
+                  transform: translate(-50%, 100%);
+
+                  @include respond (tab-small) {
+                  transform: translate(-50%, 160%);
+                        
+                  }
+
+                  @include respond (lg-phone) {
+                        transform: translate(-50%, 130%);
+                  }
+            }
+      }
+   
 }

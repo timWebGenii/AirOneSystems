@@ -1,19 +1,28 @@
 .section-quality {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    margin: 15rem 0 10rem 0;
+    padding: 0 10rem;
+
+    @include respond ( tab-ipad-portrait) {
+        margin: 5rem 0;
+        padding: 10rem 3rem 0rem 10rem;
+    }
 
     @include respond (tab-mid) {
         display: flex;
         flex-flow: column;
-    }
-    @include respond (tab-small) {
+        margin: 10rem 0 0rem 0;
         padding-top: 5rem;
+        
+    }
+
+    @include respond (tab-small) {
+        padding-top: 15rem;
     }
     @include respond (phone) {
-        padding-top: 2rem;
-        margin: 8rem 0;
+        padding-top: 8rem;
+        margin: 8rem 0 3rem 0;
     }
     
 }
@@ -24,14 +33,17 @@
     transform: skewY(-7deg);
     overflow: hidden;
 
-    @include respond (tab-ipad) {
-        height: 50vh
+    @include respond (tab-ipad-portrait) {
+        height: 20vh
+    }
+    @include respond (tab-mid) {
+        height: 50vh;
     }
     @include respond (tab-port) {
         height: 40vh
     }
     @include respond (phone) {
-        height: 35vh
+        height: 25vh
     }
 
     & > * {
@@ -43,11 +55,6 @@
     @include absCenter;
     transform: translate(-50%, -50%) skewY(7deg);
     
-    & > .heading-primary--main {
-        @include respond (phone) {
-            font-size: 1rem;
-        }
-    }
     
    }
     
@@ -60,19 +67,26 @@
     
     margin-top: -15rem;
 
-    & > .btn-text:link,
-    & > .bth-text:visited {
-        margin-top: 10rem;
+    
+    @include respond (phone) {
+        padding: 15rem 10rem 10rem 10rem;
+    margin-top: -10rem;
     }
-
-    @include respond (tab-mid) {
-        
-    }
+   
     
     .services {
         display: flex;
+        flex-flow: row wrap;
         justify-content: space-evenly;
         align-items: flex-end;
+
+        &--btn{
+            margin-top: 15rem;
+
+            @include respond (tab-small) {
+                margin-top: 0;
+            }
+        }
 
     }
 
@@ -85,12 +99,31 @@
     background-image: url(../img/dealerGoodman2.jpg);
     background-size: cover;
 
+    @include respond (tab-ipad) {
+        padding-left: 2rem;
+    }
+
+    @include respond (tab-small) {
+        text-align: center;
+        padding: 5rem 0;
+    }
+
         & .paragraph {
             width: 45%;
+
+            @include respond (tab-ipad) {
+                width: 55%;
+            }
+
+            @include respond (tab-small) {
+                width: 75%;
+                margin: 0 auto;
+            }
         }
 }
 
 .section-get-started{
-    padding: 10rem;
-    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark)
+    padding: 5rem 10rem;
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 }
+

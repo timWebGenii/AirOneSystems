@@ -1,36 +1,31 @@
 .header {
-    position: relative;
+        height: 70vh;
+        clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    &__background {
-        height: 80vh;
-        clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
-        overflow: hidden;
 
+    &-home{
+        background-image: url(../img/home-header.jpg);
+        background-size: cover;
     }
 
-    &__box {
-        position: absolute;
-       top: 60%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-        width: 90vw;
-
-        @include respond (tab-port) {
-            top: 50%;
-            width: 100vw;
-        }
-        @include respond (tab-small) {
-            top: 60%;
-        }
-        @include respond (phone) {
-            top: 50%;
-        }
+    &-services {
+        background-image: url(../img/goodmanWarehouse.jpg);
+        background-size: cover;
     }
+    
+
     &__content {
+        text-align: center;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
-
+        align-items: center;
+        
+       
         @include respond (tab-small) {
             flex-flow: column;
             align-items: center;
@@ -40,30 +35,11 @@
     }
 
     &__text-box {
-        @include respond (tab-land) {
-            padding-top: 5rem;
-        }
-    }
-
-    &__product-box {
-        position: relative;
-        top: 10rem;
-        flex: 0 1 40%;
-        display: flex;
-        justify-content: center;
-
-        @include respond (tab-mid){
-            flex: 0 1 25%;
-        }
-        @include respond (tab-small) {
-            width: 30rem;
-        }
-        @include respond (phone) {
-            width: 25rem;
-        }
-    }
-
-    &__product-img{
         
+        @include respond (tab-land) {
+            // padding-top: 5rem;
+        }
     }
+
+    
 }

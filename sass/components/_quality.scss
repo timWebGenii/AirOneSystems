@@ -18,17 +18,37 @@
         &--box-1,
         &--box-2 {
             margin-bottom: 3rem;
+            
             @include respond (tab-mid) {
                flex: 0 1 45%;
             }
         }
     }
 
-    
+    &__img {
+
+        &--box-1,
+        &--box-2 {
+            text-align: center;
+           padding-bottom: 10rem;
+            
+        }
+        &--box-1{
+            
+        }
+        &--box-2 {
+
+        }
+    }    
     
     &__text,
     &__img {
-        flex: 0 1 40%
+        flex: 0 1 45%;
+
+        @include respond ( tab-ipad-portrait) {
+            flex: 0 1 50%;
+            
+        }
     }
 
 

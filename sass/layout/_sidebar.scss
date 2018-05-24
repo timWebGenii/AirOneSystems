@@ -1,6 +1,6 @@
 .sidebar {
         position: relative;
-        width: 50vw;
+        width: 40vw;
         background-color: $color-dark-grey-3;
         display: flex;
         flex-flow: column;
@@ -39,11 +39,11 @@
             justify-content: flex-end;
             align-items: center;
 
-            &:nth-child(2){
-                border: none;
-            }
+        //     &:nth-child(2){
+        //         border: none;
+        //     }
         
-            &:not(:nth-child(2)) {
+            &:not(:last-child) {
                 margin-bottom: 3rem;
           }
           &:hover > .sidebar__link {

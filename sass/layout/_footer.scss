@@ -1,25 +1,55 @@
 .footer {
-    padding: 10rem;
     background-color: $color-dark-grey-3;
 
-    display:flex;
-    
+    &__top{
+        padding: 10rem 10rem 5rem 10rem;
+        display: flex;
+        justify-content: space-around;
 
-    & .row {
-        align-items: flex-start;
+        @include respond (tab-small) {
+            flex-flow: column;
+        }
+        
+    }
+
+    &__logo-box {
+        margin-bottom: 5rem;     
+        
+        @include respond (tab-small) {
+            display: flex;
+            justify-content: center;   
+        }
     }
 
     & .col {
-        flex: 0 1 20%;
+        flex: 0 1 23%;
+        margin-right: 1rem;
+
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+
     }
+
+    
 
     &__heading {
         color: $color-secondary;
-        font-size: 2rem;
+        font-size: 1.5rem;
+
+        @include respond (tab-small) {
+            margin-bottom: .3rem;           
+        }
     }
 
-    & p {
-        width: 75%;
+    & .col p {
+        width: 90%;
+        font-size: 1.3rem;
+
+        @include respond (tab-small) {
+            width: 60%;          
+        }
+        
     }
 
     &__list {
@@ -39,5 +69,18 @@
         }
 
     }
-
+    &__bottom {
+      
+        background-color: $color-black;
+       
+       & > p{
+        
+        margin-left: 10rem;
+        @include respond (tab-small) {
+            margin-left: 0;
+            text-align: center;
+        }
+          
+       }
+    }
 }
