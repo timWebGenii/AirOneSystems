@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10rem;
+    padding: 10rem;
+    
 
     @include respond ( tab-ipad-portrait) {
         margin: 5rem 0;
@@ -12,65 +13,79 @@
     @include respond (tab-mid) {
         display: flex;
         flex-flow: column;
-        margin: 10rem 0 0rem 0;
+        margin: 0;
         padding-top: 5rem;
         
     }
 
-    @include respond (tab-small) {
-        padding-top: 15rem;
-    }
-    @include respond (phone) {
-        padding-top: 8rem;
-        margin: 8rem 0 3rem 0;
-    }
+   
     
 }
 
 .section-call-us {
     position: relative;
-    height: 60vh;
-    transform: skewY(-7deg);
-    overflow: hidden;
+    height: 30vh;
+    width: 90vw;
+    margin: 0 auto;
+    clip-path: polygon(0 0, 100% 0, 100% 20vh, 50% 100%, 0 20vh);
+   
 
     @include respond (tab-ipad-portrait) {
-        height: 20vh
-    }
-    @include respond (tab-mid) {
-        height: 50vh;
+        height: 20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 15vh, 50% 100%, 0 15vh);
+        
     }
     @include respond (tab-port) {
-        height: 40vh
-    }
-    @include respond (phone) {
-        height: 25vh
+        height: 20vh;
+    clip-path: polygon(0 0, 100% 0, 100% 10vh, 50% 100%, 0 10vh);
+        
     }
 
-    & > * {
-        transform: skewY(7deg);
-              
-        }
-   
+    @include respond (sm-phone) {
+        height: 15vh;
+    clip-path: polygon(0 0, 100% 0, 100% 10vh, 50% 100%, 0 10vh);
+  
+    }
+
+
+    
    &__text-box {
     @include absCenter;
-    transform: translate(-50%, -50%) skewY(7deg);
-    
-    
+    text-align: center;
+
+     
+
+    & .heading-primary--main {
+        
+       
+
+        @include respond (lg-phone){
+            font-size: 4rem;
+        }
+        @media only screen and(max-width: 31.875em){
+            font-size: 3rem;
+        }
+    @include respond (sm-phone) {
+            font-size: 2.5rem;
+           
+        }
+    }
    }
-    
+   
      
 }
 
 .section-services {
     background-color: $color-dark-grey-3;
-    padding: 20rem 10rem 10rem 10rem;
+    padding:30rem 10rem 10rem 10rem;
     
-    margin-top: -15rem;
+    margin-top: -18rem;
 
     
-    @include respond (phone) {
-        padding: 15rem 10rem 10rem 10rem;
-    margin-top: -10rem;
+    @include respond (sm-phone) {
+        padding:10rem;
+    
+        margin-top: -9rem;
     }
    
     
@@ -81,10 +96,10 @@
         align-items: flex-end;
 
         &--btn{
-            margin-top: 15rem;
+            margin-top: 20rem;
 
             @include respond (tab-small) {
-                margin-top: 0;
+                margin-top: 5rem;
             }
         }
 
@@ -122,8 +137,5 @@
         }
 }
 
-.section-get-started{
-    padding: 5rem 10rem;
-    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
-}
+
 

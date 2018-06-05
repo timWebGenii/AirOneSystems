@@ -13,14 +13,6 @@ body {
         color: $color-white;
         font-size: 5rem;
         text-shadow: 0 .5rem .5rem $color-black;
-
-        @include respond (tab-land) {
-            font-size: 4rem;
-        }
-
-        @include respond (phone) {
-            font-size: 3rem;
-        }
     }
 
     &--sub {
@@ -28,8 +20,12 @@ body {
         color: $color-secondary;
         text-shadow: 0 .5rem .5rem $color-black;
         margin-bottom: .8rem;
-        @include respond (tab-land) {
-            font-size: 3rem;
+        font-weight:400;
+        
+        
+
+        @include respond (phone) {
+            font-size: 3.5rem;
         }
     }
 }
@@ -55,12 +51,29 @@ body {
     }
 }
 .paragraph{
-    font-size: $default-font-size;;
+    font-size: $default-font-size;
+    text-emphasis: justify;
+    
     &:not(:last-child) {
           margin-bottom: 3rem;
     }
 
     &--light{
         color: $color-light-grey-1;
+    }
+}
+
+.tel-link,
+.email-link,
+.map-link {
+    text-decoration: none;
+    &:link,
+    &:visited{
+        
+
+        &:hover .heading-primary--main,
+        &:hover .paragraph{
+            color: $color-secondary;
+        }
     }
 }

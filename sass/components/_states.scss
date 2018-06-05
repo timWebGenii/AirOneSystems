@@ -1,0 +1,67 @@
+.states {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    @include respond (tab-small) {
+        flex-flow: column;
+    }
+    
+   
+    &__text-box {
+
+        & .heading-primary--sub{
+            color: $color-primary;
+            text-shadow: none;
+
+            @include respond (tab-small) {
+            
+                text-align: center;
+             }
+        }
+
+        @include respond (tab-small) {
+            width: 100%;
+
+            & .paragraph{
+                text-align: center;
+            }
+         }
+
+
+    }
+
+    &__list-box {
+        display:flex;
+    align-items: flex-start;
+        margin-bottom: 2rem;
+
+        @include respond (tab-small){
+            justify-content: center;
+        }
+    
+    }
+
+    &__list {
+        font-size: 2rem;
+        margin-right: 2rem;
+        text-decoration: none;
+        list-style: none;
+        font-weight: bold;
+    }
+
+    &__item {
+        text-transform: uppercase;
+    }
+
+    &__img-box {
+        flex: 0 1 60%;
+    }
+
+    &__img {
+
+    }
+    
+}

@@ -1,45 +1,170 @@
 .header {
-        height: 70vh;
-        clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+    height: 90vh;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 50% 100%, 0 80vh);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond (lg-phone) {
+        height: 75vh;
+    clip-path: polygon(0 0, 100% 0, 100% 60vh, 50% 100%, 0 60vh);
         
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-
-    &-home{
-        background-image: url(../img/home-header.jpg);
-        background-size: cover;
     }
-
-    &-services {
-        background-image: url(../img/goodmanWarehouse.jpg);
-        background-size: cover;
-    }
-    
-
     &__content {
-        text-align: center;
         display: flex;
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
-        
-       
+        max-width: 150rem;
         @include respond (tab-small) {
             flex-flow: column;
             align-items: center;
             text-align: center;
         }
-        
-    }
-
-    &__text-box {
-        
-        @include respond (tab-land) {
-            // padding-top: 5rem;
+        @include respond (tab-ipad-portrait) {
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            
         }
     }
 
+    // -----------------home header----------------
+    &-home {
+        background-image: url(../img/home-header.jpg);
+        background-size: cover;
+        background-position: 20% 50%;
+
+        
+        & .header__content {
+            justify-content: space-between;
+            width: 100vw;
+            padding: 0 10rem;
+
+            @include respond( tab-small) {
+                margin-top: 20rem;
+            }
+
+            @include respond (lg-phone) {
+                margin-top: 32rem;
+            }
+
+            @include respond (sm-phone) {
+                margin-top: 32rem;
+                padding: 0 1rem;
+            }
+            
+        }
+        &__product-box {
+            margin-top: 18rem;
+            align-self: flex-end;
+            
+            &-img{
+                width: 33rem;
+                height: 43rem;
+
+                @include respond(tab-mid) {
+                    width: 26rem;
+                    height: 35rem;
+                }
+            }
+
+            @include respond (tab-small) {
+                margin-top: 10rem;
+                align-self: center;
+            }
+
+            @include respond (lg-phone) {
+                width: 30rem;
+                height: 40rem;
+            }
+
+            @include respond (tab-ipad-portrait) {
+                margin-top: 10rem;
+                align-self: center;
+            }
+
+            @include respond (sm-phone) {
+                margin-top: 4rem;
+            }
+        }
+    }
+    // -----------------services header----------------
     
+    &-services {
+        background-image: url(../img/goodmanWarehouse.jpg);
+        background-size: cover;
+        position: relative;
+        z-index: 50;
+        & .heading-primary--sub {
+            width: 75vw;
+        }
+        & .paragraph {
+            transform: translateY(150%);
+            font-size: 2.5rem;
+            text-shadow: 0 .3rem .5rem $color-black;
+
+            @include respond (tab-lg) {
+                display: none;
+            }
+        }
+    }
+    // -----------------multi-family header----------------
+    
+    &-multi-family {
+        background-image: url(../img/goodmanApartments.jpg);
+        background-size: cover;
+
+        
+        & .heading-primary--sub {
+            color: $color-white;
+
+            @include respond (lg-phone) {
+                padding: 3rem;
+                line-height: 5rem;
+            }
+        }
+        & .heading-primary--number {
+            color: $color-secondary;
+            font-size: 10rem;
+
+            @include respond (lg-phone) {
+          
+            padding: 0;
+            }
+        }
+
+        
+    }
+    // -----------------contact us header----------------
+
+    &-contact-us{
+        background-image: linear-gradient(to right bottom, rgba($color-primary, .58), rgba($color-primary, .58)),url(../img/airOneMap.png);
+        background-size: cover;
+        background-position: 50% 70%;
+
+        @include respond (tab-land) {
+            background-size: 200%;
+        }
+        @include respond (lg-phone) {
+            background-size: 300%;
+        }
+
+        @include respond (tab-ipad-portrait) {
+       background-position: 50% 60%;
+            
+        }
+        
+    }
+    // -----------------about us header----------------
+
+    &-about-us{
+        background-image: linear-gradient(to right bottom, rgba($color-primary, .58), rgba($color-primary, .58)),url(../img/about-us-header.jpg);
+        background-size: cover;
+        background-position: 50% 60%; 
+
+
+    }
+    &__text-box {}
 }

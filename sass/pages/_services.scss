@@ -1,42 +1,202 @@
-.section-detail-services{
+.section-services-nav{
+   @include respond (tab-lg) {
+       display: none;
+   }
+    transform: translateY(-20%);
+    height: 50vh;
+        clip-path: polygon(0 0, 100% 0, 100% 40vh, 50% 100%, 0 40vh);
 
+        .services-nav{
+            list-style: none;
+                height: 50vh;
+                width: 100vw;                
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-evenly;
+            &__item{
+                flex: 0 1 25%;
+                background-color: $color-dark-grey-3;
+                border-right: .2rem solid $color-dark-grey-1;
+                transition: all .3s;
 
-    .detail-services {
-        
-        &__content{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            padding: 10rem;
-            @include respond (tab-mid) {
-                padding: 5rem;
-            }
-            @include respond (tab-lg) {
-                flex-flow: column;
-                align-items: center;
-            }
-            &--left{
-                flex: 0 1 47%;
-                @include respond (tab-lg) {
-                    text-align: center;
-                    margin-bottom: 5rem;
+                &:hover{
+                    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+                }
+
+                &:hover .services-nav__icon{
+                    transform: translateY(10%);
+                }
+                &:hover .services-nav__link-title {
+                    transform: translateY(-30%);
                 }
             }
-
-            &--right{
-                flex: 0 1 47%;
-                
+            &__link{
+                height: 100%;
                 display: flex;
-                flex-flow: row wrap;
+                flex-flow: column;
                 justify-content: center;
+                align-items: center;
                 
+                &-title {
+                    margin-top: 10rem;
+                    text-align: center;
+                    transition: all .3s;
+                    width: 75%; 
+
+                }
+                &:link,
+                &:visited{
+                    text-transform: uppercase;
+            text-decoration: none;
+                    font-size: 2rem;
+                    color: $color-white;
+                    
+                }
+            }
+            &__icon{
+                fill: $color-secondary;
+                height: 25rem;
+                transform: translateY(150%);
+                transition: all .3s;
             }
         }
+}
+.section-services-mobile-nav{
+    display: none;
+    @include respond (tab-lg) {
+        display: block;
+    }
 
-        &__image-box{
-            background-color: orange;
+    margin-top: -10rem;
+
+    .services-mobile-nav{
+        padding: 15rem 5rem 5rem 5rem;
+        &__content {
+           
+        }
+        &__text-box{
+           margin-bottom: 4rem;
+           font-size: 3rem;
+           width: 75vw;
+            margin: 0 auto;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+        &__btn-squares {
+            
+            flex: 0 1 50%;
+
             display: flex;
             justify-content: center;
+            flex-flow: row wrap;
         }
     }
+
 }
+
+.section{
+    &-maint-serv{
+        display: flex;
+        align-items: center;
+         background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        padding: 5rem;
+        min-height: 50rem;
+        position: relative;
+        overflow: hidden;
+
+       & .paragraph {
+           text-align: justify;
+       }
+       &__icon-box{
+           position: absolute;
+          @include respond (tab-small) {
+              opacity: 0;
+          }
+       }
+       &__icon {
+        fill: $color-secondary;
+        transform: scale(4);
+
+        
+    }
+    }
+
+    &-duct-splits{
+        display: flex;
+        align-items: center;
+        background-color: $color-dark-grey-3;
+        padding: 5rem;
+        min-height: 50rem;
+       position: relative;
+       overflow: hidden;
+
+
+       & .paragraph {
+           text-align: justify;
+       }
+       &__icon-box{
+        position: absolute;
+        right: 0;
+        @include respond (tab-small) {
+            opacity: 0;
+        }
+    }
+    &__icon {
+        fill: $color-secondary;
+        transform: scale(4);
+    }
+    }
+
+
+    &-indoor-air{
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding: 5rem;
+        min-height: 50rem;
+        position: relative;
+
+       & .paragraph {
+           text-align: justify;
+       }
+       &__icon-box{
+        position: absolute;
+        @include respond (tab-small) {
+            opacity: 0;
+        }
+    }
+    &__icon {
+        fill: $color-secondary;
+        transform: scale(4);
+        
+    }
+    }
+
+
+    &-repair-emerg{
+        display: flex;
+        align-items: center;
+    background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary, $color-secondary-dark);
+        overflow: hidden;
+        padding: 5rem;
+        min-height: 50rem;
+        position: relative;
+        
+       & .paragraph {
+           text-align: justify;
+       }
+       &__icon-box{
+        position: absolute;
+        right: 0;
+        @include respond (tab-small) {
+            opacity: 0;
+        }
+    }
+    &__icon {
+        fill: $color-primary;
+        transform: scale(4);
+        
+    }
+    }
+}
+

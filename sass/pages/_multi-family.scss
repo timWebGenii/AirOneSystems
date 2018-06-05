@@ -1,0 +1,115 @@
+.section-design-apartments{
+    margin-top: -20rem;
+    padding-top: 25rem;
+    background-image: linear-gradient(to right bottom, rgba($color-white, 0.7), rgba($color-light-grey-1,0.7)),url(../img/apartments-lg.jpg);
+    background-size: cover;
+    background-position: center;
+    
+
+
+    .design-apartments {
+        &__title {
+            width: 60vw;
+            text-shadow: 0 .3rem .5rem $color-black;
+            margin: 0 auto;
+
+            & > .heading-secondary{
+                font-size: 5rem;
+            }
+
+            @include respond (tab-lg) {
+                width: 80vw;
+            }
+             
+        }
+        &__text-box {
+            margin: 0 auto;
+            width: 80vw;
+            padding: 5rem;
+            text-align: justify;
+            
+           @include respond (tab-small){
+               width: 95vw;
+           }
+
+           @include respond (sm-phone) {
+               width: 100vw;
+           }
+            & .paragraph{
+               background-color: rgba($color-white, 0.8);
+               border-radius: 1px;
+               padding: 5rem;
+
+               @include respond (sm-phone) {
+                   padding: 3rem;
+               }
+
+            }
+            
+        }
+       
+    }
+}
+
+.section-specialties {
+    background-color: $color-dark-grey-3;
+    padding: 5rem 10rem;
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond (phone) {
+        padding: 5rem;
+    }
+
+    @include respond (tab-lg) {
+        flex-flow: column;
+        & .heading-secondary{
+            text-align: center;
+        }
+    }
+    
+    & .paragraph {
+        text-align: justify;
+    }
+
+    .specialties {
+        &__text-box,
+        &__squares {
+            flex: 0 1 45%;
+        }
+        &__text-box {
+            align-self: flex-start;
+            
+            @include respond (tab-lg) {
+                margin-bottom: 5rem;
+            }
+        }
+        &__squares {
+            display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+
+                @include respond (tab-lg) {
+
+                    flex-flow: nowrap;
+                    width: 100%;
+                }
+
+                @include respond (lg-phone) {
+                    display: none;
+                   
+                }
+        }
+    }
+}
+
+.section-states {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 5rem 10rem;
+
+}

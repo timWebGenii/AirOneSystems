@@ -1,0 +1,64 @@
+.btn-squares {
+
+    &__item{
+        background-color: $color-dark-grey-3;
+        border: .1rem solid $color-light-grey-1;
+        width: 20em;
+        height: 20rem;
+        overflow: hidden;
+        transition: all .3s;
+        &:hover{
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+        }
+
+        &:hover .btn-squares__icon {
+            transform: translate(0);
+            opacity: .3;
+        }
+
+        @include respond (lg-phone) {
+            flex: 0 1 50%;
+        }
+
+        @include respond (sm-phone) {
+            flex: 0 1 100%;
+        }
+    }   
+    
+    
+    &__link{
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
+        &-title {
+            text-align: center;
+            transition: all .3s;
+            width: 75%; 
+            position: absolute;
+            z-index: 19;
+
+        }
+        &:link,
+        &:visited{
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 2rem;
+            color: $color-white;
+            text-shadow: 0 .3rem .5rem $color-black;
+           
+        }
+    }
+    &__icon{
+        fill: $color-secondary;
+        height: 15rem;
+        transform: translate(25%, 40%);
+        transition: all .3s;
+    }
+
+
+    
+}

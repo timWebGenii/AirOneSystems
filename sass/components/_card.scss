@@ -2,10 +2,16 @@
       position: relative;
       @include respond (tab-small) {
             flex: 0 1 50%;
-            margin-bottom: 15rem;
+            margin-bottom: 8rem;
+      }
+      @include respond (lg-phone){
+            margin-bottom: 11rem;
       }
       @include respond (phone) {
-            flex: 0 1 100%
+            flex: 0 1 100%;
+      }
+      @include respond (sm-phone) {
+            margin-bottom: 15rem;
       }
       &__title {
             font-size: 2rem;
@@ -33,7 +39,7 @@
             align-items: center;
       }
       &__icon {
-            fill:$color-secondary;
+            fill: $color-secondary;
             width: 8rem;
             transition: all .4s;
             margin: 0 auto;
@@ -45,13 +51,11 @@
             opacity: 0;
             transition: all .4s .1s;
             width: 100%;
+            height: 15rem;
             color: $color-light-grey-2;
             @include respond (phone) {
                   width: 90%;
             }
-
-            
-
       }
       &__caption {
             @include absCenter;
@@ -63,8 +67,6 @@
             opacity: 0;
             transition: all .4s;
             width: 13rem;
-
-            
       }
       &:hover &__title {
             opacity: 0;
@@ -81,33 +83,29 @@
       &:hover &__text {
             opacity: 1;
             transform: translate(-50%, 100%);
-            @include respond (tab-small) {
-                  transform: translate(-50%, 160%);
-            }
-            @include respond (lg-phone) {
-                  transform: translate(-50%, 130%);
+            @include respond (phone) {
+                  transform: translate(-50%, 85%)
             }
       }
       &:hover &__img {
             filter: blur(3px) brightness(50%);
       }
-
-//----------------no hover query------------------------//
-      
-      @media only screen and (hover: none){
+      //----------------no hover query------------------------//
+      @media only screen and (hover: none) {
+            @include respond (lg-phone) {
+                  margin-bottom: 12rem;
+            }
+            @include respond (sm-phone) {
+                  margin-bottom: 15rem;
+            }
             &__text {
                   opacity: 1;
-                  transform: translate(-50%, 100%);
-
-                  @include respond (tab-small) {
-                  transform: translate(-50%, 160%);
-                        
-                  }
-
-                  @include respond (lg-phone) {
-                        transform: translate(-50%, 130%);
+                  transform: translate(-50%, 100%); // @include respond (tab-small) {
+                  // transform: translate(-50%, 160%);
+                  // }
+                  @include respond (phone) {
+                        transform: translate(-50%, 85%);
                   }
             }
       }
-   
 }

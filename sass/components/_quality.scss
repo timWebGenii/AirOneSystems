@@ -1,6 +1,8 @@
 .quality{
     
     &__text {
+        flex: 0 1 48%;
+        
         @include respond (tab-mid) {
             width: 95vw;
             display: flex;
@@ -12,7 +14,6 @@
         @include respond (tab-small) {
             flex-flow: column;
             width: 80vw;
-            
         }
 
         &--box-1,
@@ -26,30 +27,22 @@
     }
 
     &__img {
+        flex: 0 1 48%;        
+        text-align: center;
+        @include respond (tab-mid) {
 
-        &--box-1,
-        &--box-2 {
-            text-align: center;
-           padding-bottom: 10rem;
-            
+            width: 40rem;
+            margin-top: 2rem;
         }
-        &--box-1{
-            
-        }
-        &--box-2 {
 
+        @include respond (tab-small) {
+            flex-flow: column;
         }
+       
+        
     }    
     
-    &__text,
-    &__img {
-        flex: 0 1 45%;
-
-        @include respond ( tab-ipad-portrait) {
-            flex: 0 1 50%;
-            
-        }
-    }
+    
 
 
 }

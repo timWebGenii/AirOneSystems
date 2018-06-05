@@ -1,0 +1,98 @@
+
+.section-statements {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: -30rem;
+
+    @include respond (lg-phone) {
+        display: none;
+    }
+
+    
+    .statement {
+        &__vision,
+        &__mission {
+            padding: 30rem 4rem 5rem 4rem;
+            flex: 0 1 50%;
+            background-color: $color-dark-grey-3;
+            transition: all .3s;
+            
+            & .heading-tertiary {
+                color: $color-secondary;
+            }
+            & .paragraph {
+            color: $color-light-grey-1;
+            }
+            &:hover {
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+        }
+        &__vision {
+            border-right: .1rem solid $color-dark-grey-1;
+        }
+    }
+
+    &-mobile{
+        display: none;
+        @include respond (lg-phone){
+            display: block;
+        }
+            padding: 5rem;
+
+        & .statement{
+
+            &__vision,
+            &__mission{
+                
+                & .heading-tertiary {
+                    color: $color-secondary;
+                    font-size: 3rem;
+                }
+
+                background-color: $color-dark-grey-3;
+                padding: 5rem;
+                border: 2rem solid $color-primary;
+
+                &:not(:last-child){
+                    margin-bottom: 3rem;
+                }
+
+                & .paragraph {
+                    color: $color-light-grey-1;
+                    }
+            }
+            }
+
+           
+        
+    }
+}
+
+.section-about-us {
+
+    padding: 5rem;
+    
+        .about-us__text-box {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: justify;
+            
+
+
+            & .paragraph{
+                background-color: $color-white;
+                padding: 5rem;
+                &:not(:last-child){
+                    margin-bottom: 3rem;
+                }
+            }
+            
+            
+        }
+                @media only screen and(max-width: 31.875em){
+                    padding: 3rem;
+                }
+    
+}

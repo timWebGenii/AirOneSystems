@@ -1,0 +1,61 @@
+.repair-emerg{
+
+    &__content-box {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        @include respond (tab-small) {
+            height: 100%;
+           flex-flow: column;
+           justify-content: space-evenly;
+        }
+       
+    }
+    &__text-box {
+        flex: 0 1 40%;
+
+        & .heading-tertiary {
+            color: $color-primary;
+
+            @include respond (tab-small){
+                font-size: 2.5rem;
+            }
+        }
+        & .paragraph--light {
+            @include respond (tab-small) {
+                font-size: 2rem;
+                margin-bottom: 3rem;
+            }
+        }
+       
+    }
+    &__cta-box {
+        margin-left: 2rem;
+        @include respond (tab-small) {
+            order: 1;
+            margin: 0 auto;
+        }
+    }
+
+
+  
+    &__title-box {
+        flex: 0 1 40%;
+        text-align: right;
+        &--title {
+           
+            color: $color-white;
+            text-shadow: 0 .3rem .5rem $color-black;
+        }
+        @include respond (tab-small) {
+            flex: 0;
+            text-align: center;
+            order:-1
+        }
+        
+    }
+    
+}

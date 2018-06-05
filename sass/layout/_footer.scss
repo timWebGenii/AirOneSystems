@@ -1,33 +1,86 @@
 .footer {
     background-color: $color-dark-grey-3;
 
-    &__top{
-        padding: 10rem 10rem 5rem 10rem;
-        display: flex;
-        justify-content: space-around;
 
-        @include respond (tab-small) {
-            flex-flow: column;
+    &__top{
+
+        padding: 9rem 10rem 5rem 10rem;
+        @include respond(tab-port) {
+            padding-top: 8rem;
         }
+        @include respond (tab-small) {
+            padding: 7rem 5rem 3rem 5rem;
+        }
+        
         
     }
 
     &__logo-box {
-        margin-bottom: 5rem;     
+        flex: 0 1 100%;
+        text-align: center;
+        margin-bottom: 3rem;
+
         
-        @include respond (tab-small) {
-            display: flex;
-            justify-content: center;   
-        }
     }
 
-    & .col {
-        flex: 0 1 23%;
+    &__col {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: flex-start;
         margin-right: 1rem;
 
-        &:not(:last-child){
-            margin-bottom: 2rem;
+
+        @include respond (tab-small) {
+            padding: 1rem;
+            flex-flow: row wrap;
+            width: 100%;
+
+            & > div {
+                flex: 0 1 45%;
+                margin-bottom: 2rem;
+            }
+
+            &--pages,
+            &--cust-services {
+                text-align: right;
+                margin-right: .5rem;
+            }
+
+           
         }
+
+        @include respond(sm-phone) {
+            flex-flow: column;
+            align-items: center;
+            text-align: center;
+            
+            &--pages,
+            &--cust-services {
+                text-align: center;
+            }
+        }
+
+        &--credentials {
+           flex: 0 1 30%;
+           
+        }
+
+        &--pages {
+           
+        }
+
+        &--logo {
+            align-self: center;
+        }
+
+        &--services {
+          
+        }
+
+        
+        
+        
 
     }
 
@@ -35,7 +88,7 @@
 
     &__heading {
         color: $color-secondary;
-        font-size: 1.5rem;
+        font-size: 2rem;
 
         @include respond (tab-small) {
             margin-bottom: .3rem;           

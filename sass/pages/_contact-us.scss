@@ -1,0 +1,111 @@
+.section-contact-us{
+    background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+    
+
+    margin-top: -30rem;
+    padding-top: 35rem;
+    padding-bottom: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  
+
+
+.contact-us__box{
+    
+    display: flex;
+    
+    width: 75rem;
+    height: 60rem;
+    margin: 0 auto;
+    clip-path: polygon(0 0, 100% 0, 100% 50rem, 50% 100%, 0 50rem);
+
+
+    
+
+    @include respond (lg-phone){
+        width: 90vw;
+        
+    }
+
+    @include respond (phone){
+        flex-flow: column;
+        height: 75rem;
+    clip-path: polygon(0 0, 100% 0, 100% 65rem, 50% 100%, 0 65rem);
+        
+    }
+
+    
+    &-form{
+        background-color: $color-dark-grey-3;
+        flex:50%;
+        
+        & .form {
+           
+            &__input{
+                background-color: $color-light-grey-1;
+
+                
+            }
+            
+            @include respond (sm-phone){
+              padding-bottom: 6rem;
+                
+            }
+           
+         }
+    }
+
+
+    &-contact{
+        flex:50%;
+       
+        
+    background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+    padding: 3rem;
+    display: flex;
+    
+   
+    
+   @include respond (phone) {
+       flex: 50%;
+       align-items: center;
+       justify-content: center;
+   }
+        
+   .contact-list{
+       margin-top: 10rem;
+       display: flex;
+    flex-flow: column;
+       
+    @include respond (phone) {
+        margin-top: 0;
+       
+    }
+
+        &__contact-item{
+            display: flex;
+            align-items: center;
+           
+        }
+        &__icon {
+            fill: $color-secondary;
+            height: 3rem;
+            width: 3rem;
+            margin-right: .5rem;
+            @include respond (tab-small) {
+                margin-right: .3rem;
+            }
+        }
+
+    
+    }
+
+    
+    }
+   
+}
+    
+}
+

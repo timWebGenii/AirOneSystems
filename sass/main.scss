@@ -1,23 +1,32 @@
-@import 'abstracts/functions';
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-@import 'base/animations';
 @import 'base/base';
 @import 'base/typography';
 @import 'base/utilities';
 
+@import 'components/btn-squares';
 @import 'components/button';
 @import 'components/card';
+@import 'components/duct-splits';
 @import 'components/form';
 @import 'components/get-started';
+@import 'components/indoor-air';
+@import 'components/maint-serv';
+@import 'components/map';
 @import 'components/quality';
+@import 'components/repair-emerg';
 @import 'components/service-square';
+@import 'components/states';
 
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/navigation';
 @import 'layout/sidebar';
+@import 'layout/get-started';
 
+@import 'pages/about-us';
+@import 'pages/contact-us';
 @import 'pages/home';
+@import 'pages/multi-family';
 @import 'pages/services';

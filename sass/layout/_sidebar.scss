@@ -7,6 +7,14 @@
         justify-content: space-around;
         align-items: center;
 
+        @include respond (phone) {
+            width: 50vw;
+        }
+
+        @include respond (sm-phone) {
+            width: 100vw;
+        }
+
         &__icon {
             height: 3rem;
             width: 3rem;
@@ -39,9 +47,7 @@
             justify-content: flex-end;
             align-items: center;
 
-        //     &:nth-child(2){
-        //         border: none;
-        //     }
+            
         
             &:not(:last-child) {
                 margin-bottom: 3rem;
@@ -49,8 +55,10 @@
           &:hover > .sidebar__link {
               &:link,
               &:visited {
-                color: $color-light-grey-2;
+                color: $color-secondary;
             }
+
+            
           }
           
         }
@@ -58,6 +66,8 @@
         &__item--active::before {
             transform: scaleY(1);
             width: 100%;
+
+            
             // color: $color-light-grey-2;
         }
         &__item::before {
@@ -74,13 +84,16 @@
             transform-origin: center;
             transition: transform .2s,
             width .3s cubic-bezier(0,1.18,.89,.99) .2s;
+
+            
         }
         
 
         &__link {
             
             &:link,
-            &:visited {
+            &:visited,
+             {
                 font-size: 2rem;
                 font-weight: bold;
                 text-transform: uppercase;
@@ -91,42 +104,12 @@
                 height: 4rem;
                 margin-right: 2rem;
 
-            }
 
-        }
-        &__services {
-            margin-bottom: 3rem;
-            border-bottom: .6rem solid $color-secondary;
-            
-
-            &--item {
-                background-color: $color-light-grey-3;
-                height: 4rem;
-                text-align: right;
                 
-                position: relative;
-                display: flex;
-                justify-content: flex-end;
-                align-items: center;
-
-               
             }
 
-            &--link {
             
-                &:link,
-                &:visited {
-                    font-size: 1.6rem;
-                    font-weight: bold;
-                    text-transform: uppercase;
-                    text-decoration: none;
-                    color: $color-primary;
-                    position: relative;
-                    z-index: 10;
-                    margin-right: 2rem;
-    
-                }
-    
-            }
+
         }
+       
     }
