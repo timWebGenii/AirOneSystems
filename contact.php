@@ -21,7 +21,7 @@
 	// variables end
 	
 	// email address starts
-	$emailAddress = 'tim@websitegenii.com';
+	$emailAddress = 'INFO@AIRONELLC.COM';
 	// email address ends
 	
 	$subject = "Message From: $name";	
